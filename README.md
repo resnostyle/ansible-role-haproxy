@@ -1,6 +1,6 @@
 # Ansible Role: HAProxy
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-haproxy.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-haproxy)
+[![Build Status](https://travis-ci.org/resnostyle/ansible-role-haproxy.svg?branch=master)](https://travis-ci.org/resnostyle/ansible-role-haproxy)
 
 Installs HAProxy on RedHat/CentOS and Debian/Ubuntu Linux servers.
 
@@ -58,12 +58,10 @@ None.
     - hosts: balancer
       sudo: yes
       roles:
-        - { role: geerlingguy.haproxy }
+        - { role: geerlingguy.haprox }
 
 ## License
 
 MIT / BSD
 
-## Author Information
 
-This role was created in 2015 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
