@@ -53,13 +53,6 @@ A list of backend servers (name and address) to which HAProxy will distribute re
 
 None.
 
-## Example Playbook
-
-    - hosts: balancer
-      sudo: yes
-      roles:
-        - { role: geerlingguy.haprox }
-
 ## License
 
 MIT / BSD
