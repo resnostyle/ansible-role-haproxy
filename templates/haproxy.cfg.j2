@@ -11,15 +11,15 @@ global
   group {{ haproxy_group }}
   daemon
 
-{% if haproxy_admin == true %}
+{% if haproxy_admin_port is defined %}
 listen admin
   bind {{ haproxy_admin_port }}
   stats enable
   stats refresh 5s
   stats uri /admin_stats
   {% if haproxy_stats_auth_user is defined && haproxy_stats_auth_password is defined %}
-    stats auth {{ haproxy_stats_auth_user }}:{{ haproxy_stats_auth_password }}
-  {% endif %}
+    stats auth {{haproxy_stats_auth_user }}:{{ haproxy_stats_auth_password }}
+   {% endif %}
 {% endif %}
 
 defaults
