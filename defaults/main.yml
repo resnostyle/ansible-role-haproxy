@@ -23,7 +23,7 @@ haproxy_backend_httpchk: 'HEAD / HTTP/1.1\r\nHost:localhost'
 
 haproxy_frontend_options: []
 haproxy_backend_options: []
-
+haproxy_backend_servers: []
 #haproxy_config:
 #  defaults.options:
 #    - EXAMPLE
