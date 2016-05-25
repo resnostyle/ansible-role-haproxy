@@ -17,9 +17,6 @@ listen admin
   stats enable
   stats refresh 5s
   stats uri /admin_stats
-  {% if haproxy_stats_auth_user is defined && haproxy_stats_auth_password is defined %}
-    stats auth {{haproxy_stats_auth_user }}:{{ haproxy_stats_auth_password }}
-   {% endif %}
 {% endif %}
 
 defaults
