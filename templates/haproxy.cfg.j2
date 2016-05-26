@@ -54,6 +54,6 @@ backend {{ haproxy_backend_name }}
     option forwardfor
     option httpchk {{ haproxy_backend_httpchk }}
     cookie SERVERID insert indirect
-{% for backend in haproxy_backend_servers %}
-    server {{ backend.name }} {{ backend.address }} cookie {{ backend.name }} check
-{% endfor %}
+ for backend in haproxy_backend_servers %}
+    server  backend.name }}  backend.address }} cookie  backend.name }} check
+ endfor %}
