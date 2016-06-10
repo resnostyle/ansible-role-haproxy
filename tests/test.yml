@@ -16,9 +16,9 @@
           backends:
             - 127.0.0.1:8080
 
-    haproxy_frontend_name: 'frontend'
+    haproxy_frontend_name: 'haproxy_group'
     haproxy_frontend_port: '80'
-    haproxy_backend_name: 'backend'
+    haproxy_backend_name: 'haproxy_group'
     haproxy_backend_port: '8080'
     haproxy_backend_servers: [name: test, address: 8.8.8.8]
 
