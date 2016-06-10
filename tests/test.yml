@@ -20,7 +20,9 @@
     haproxy_frontend_port: '80'
     haproxy_backend_name: 'haproxy_group'
     haproxy_backend_port: '8080'
-    haproxy_backend_servers: [name: test, address: 8.8.8.8]
+    haproxy_backend_servers:
+      - name: app1
+	address: 127.0.0.1:8080
 
   roles:
     - ansible-role-haproxy
