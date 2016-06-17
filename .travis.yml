@@ -2,7 +2,7 @@
 sudo: required
 
 env:
-#  - SITE=test.yml
+  - SITE=test.yml
   - >
     container_id=$(mktemp)
     distribution=centos
@@ -29,10 +29,10 @@ script:
  # Run container in detached state
   - sudo docker run --detach --volume="${PWD}":/etc/ansible/roles/role_under_test:ro ${run_opts} ${distribution}:ansible "${init}" > "${container_id}"
 
-#  - sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm a
+  - sudo docker exec --tty "$(cat ${container_id})" { echo '[defaults]'; echo 'roles_path = /etc/ansible/roles/role_under_test/'; } >> ansible.cfg
 
     # Syntax check
-  - sudo docker exec --tty "$(cat ${container_id})" ls -lla /etc/ansible/roles/role_under_test/
+  - sudo docker exec --tty "$(cat ${container_id})" ansible-playbook -i tests/inventory tests
   
     # Test role
   - sudo docker exec --tty "$(cat ${container_id})" ls -lla
