@@ -19,7 +19,7 @@ install:
 
 script:
   # Check syntax of ansible playbook
-  - sudo docker exec centos-${OS_VERSION} ansible-playbook /etc/ansible/roles/yum-plugin-priorities/tests/test.yml --syntax-check
+  - sudo docker exec centos-${OS_VERSION} ansible-playbook -i /etc/ansible/roles/yum-plugin-priorities/tests/inventory /etc/ansible/roles/yum-plugin-priorities/tests/test.yml --syntax-check
   # Run ansible playbook
   - sudo docker exec centos-${OS_VERSION} ansible-playbook /etc/ansible/roles/yum-plugin-priorities/tests/test.yml
 
