@@ -2,7 +2,7 @@
 sudo: required
 
 env:
-  - SITE=test.yml
+#  - SITE=test.yml
   - >
     container_id=$(mktemp)
     distribution=centos
@@ -32,7 +32,7 @@ script:
 #  - sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm a
 
     # Syntax check
-  - sudo docker exec --tty "$(cat ${container_id})" pwd
+  - sudo docker exec --tty "$(cat ${container_id})" ls -lla /etc/ansible/roles/role_under_test/
   
     # Test role
   - sudo docker exec --tty "$(cat ${container_id})" ls -lla
