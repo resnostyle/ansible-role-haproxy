@@ -18,6 +18,7 @@ install:
   - sudo docker exec centos-${OS_VERSION} yum -y install ansible
 
 script:
+  - sudo docker exec centos-${OS_VERSION} "{ echo '[defaults]'; echo 'roles_path = /etc/ansible/roles/yum-plugin-priorites'; } >> ansible.cfg"
   # Check syntax of ansible playbook
   - sudo docker exec centos-${OS_VERSION} ansible-playbook -i /etc/ansible/roles/yum-plugin-priorities/tests/inventory /etc/ansible/roles/yum-plugin-priorities/tests/test.yml --syntax-check
   # Run ansible playbook
