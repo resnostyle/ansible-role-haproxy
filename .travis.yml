@@ -21,6 +21,7 @@ install:
   - sudo docker exec centos-${OS_VERSION} echo "roles_path = /etc/ansible/roles/yum-plugin-priorites" >> ansible.cfg
   - sudo docker exec centos-${OS_VERSION} pwd
   - sudo docker exec centos-${OS_VERSION} find / -name "*.cfg"
+  - sudo docker exec centos-${OS_VERSION} find / -name "*.cfg.j2"
 
 script:
 #  - sudo docker exec centos-${OS_VERSION}  echo '[defaults]'; echo 'roles_path = /etc/ansible/roles/yum-plugin-priorites'; } >> ansible.cfg
