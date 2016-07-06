@@ -16,7 +16,6 @@ install:
   - sudo docker run --detach --volume="${PWD}":/etc/ansible/roles/yum-plugin-priorities:ro --name centos-${OS_VERSION} centos:${OS_VERSION} sleep 300
   - sudo docker exec centos-${OS_VERSION} yum -y install epel-release
   - sudo docker exec centos-${OS_VERSION} yum -y install ansible
-#  - sudo docker exec centos-${OS_VERSION} cat /etc/ansible/ansible.cfg
   - sudo docker exec centos-${OS_VERSION} echo "[defaults]" > /etc/ansible/ansible.cfg
   - sudo docker exec centos-${OS_VERSION} echo "roles_path = /etc/ansible/roles/yum-plugin-priorites/" >> /etc/ansible/ansible.cfg
   - sudo docker exec centos-${OS_VERSION} pwd
