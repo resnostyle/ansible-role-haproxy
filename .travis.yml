@@ -18,7 +18,7 @@ install:
   - sudo docker exec centos-${OS_VERSION} yum -y install ansible
   - sudo docker exec centos-${OS_VERSION} echo "[defaults]" > ansible.cfg
   - sudo docker exec centos-${OS_VERSION} echo "roles_path = /etc/ansible/roles/yum-plugin-priorites/" >> ansible.cfg
-  - sudo docker exec centos-${OS_VERSION} ansible --verions
+  - sudo docker exec centos-${OS_VERSION} ansible --version
   - sudo docker exec centos-${OS_VERSION} pwd
   - sudo docker exec centos-${OS_VERSION} find / -name "*.cfg"
   - sudo docker exec centos-${OS_VERSION} find / -name "*.cfg.j2"
