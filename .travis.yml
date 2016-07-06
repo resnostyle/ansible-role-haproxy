@@ -18,7 +18,9 @@ install:
   - sudo docker exec centos-${OS_VERSION} yum -y install ansible
   - sudo docker exec centos-${OS_VERSION} echo "[defaults]" > ansible.cfg
   - sudo docker exec centos-${OS_VERSION} echo "roles_path = /etc/ansible/roles/yum-plugin-priorites" >> ansible.cfg
-  - sudo docker exec centos-${OS_VERSION} cat ansible.cfg
+  - sudo docker exec centos-${OS_VERSION} pwd
+  - sudo docker exec centos-${OS_VERSION} find / -name "*.cfg"
+
 script:
 #  - sudo docker exec centos-${OS_VERSION}  echo '[defaults]'; echo 'roles_path = /etc/ansible/roles/yum-plugin-priorites'; } >> ansible.cfg
   # Check syntax of ansible playbook
