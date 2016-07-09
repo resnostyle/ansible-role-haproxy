@@ -2,9 +2,9 @@
 dependencies: []
 
 galaxy_info:
-  author: geerlingguy
+  author: resnostyle
   description: HAProxy installation and configuration.
-  company: "Midwestern Mac, LLC"
+  company: "BryanWP"
   license: "license (BSD, MIT)"
   min_ansible_version: 1.8
   platforms:
